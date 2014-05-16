@@ -1,0 +1,37 @@
+<!doctype html>
+<title>Oscilloscope</title>
+
+<canvas></canvas>
+
+<style>
+html, body {
+	height: 100%;
+}
+
+html, body, canvas {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #000;
+}
+
+canvas {
+	position: absolute;
+
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: optimizeSpeed;
+	-webkit-image-rendering: -webkit-optimize-contrast;
+	-webkit-image-rendering: optimizeSpeed;
+}
+</style>
+
+<script src="oscope.js"></script>
