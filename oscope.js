@@ -1,7 +1,11 @@
 (function(AudioContext, requestAnimationFrame) {
 	var audio = new Audio();
+	var file = (location.search.match(/[?&]file=([^?&]+)/) || ['']).pop();
 
-	audio.src = (location.search.match(/[?&]file=([^?&]+)/) || ['']).pop();
+	if (!file)
+		location.href = location.href + '?file=http://oscillo.app.9k1.us/oscillofun.ogg';
+
+	audio.src = file;
 
 	var context = new AudioContext();
 	var source = context.createMediaElementSource(audio);
